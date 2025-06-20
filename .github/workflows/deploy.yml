@@ -23,10 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Lint with flake8
+    - name: Lint with flake8 using config
       run: |
         pip install flake8
-        flake8 . --exclude=.venv,__pycache__,.git --max-line-length=100
+        flake8 --config=.flake8 .
 
     - name: Export OPENAI_API_KEY for tests or builds
       run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
