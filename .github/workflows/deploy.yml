@@ -28,5 +28,8 @@ jobs:
         pip install flake8
         flake8 . --exclude=.venv,__pycache__,.git --max-line-length=100
 
+    - name: Export OPENAI_API_KEY for tests or builds
+      run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
+
     - name: Notify on success
       run: echo "✅ Code passed checks and deployed manually via Streamlit Cloud"
