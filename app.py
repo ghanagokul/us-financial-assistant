@@ -13,7 +13,7 @@ BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:5000")  # Fallback to l
 gpt = OpenAI(api_key=openai_key)
 
 # ------------------- Page Config & Styling -------------------
-st.set_page_config(page_title="Investment Assistant for Migrants from entire world", layout="centered")
+st.set_page_config(page_title="Investment Assistant for Migrants ", layout="centered")
 
 st.markdown("""
     <style>
@@ -30,7 +30,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="title-style">📊 Personalized Investment Planner for U.S. Migrants</div>', unsafe_allow_html=True)
+st.markdown('<div class="title-style">📊 Personalized Investment Planner for U.S. Migrants from entire world</div>', unsafe_allow_html=True)
 
 # ------------------- Main Form -------------------
 st.markdown("### 👤 Tell us about yourself:")
