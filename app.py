@@ -7,7 +7,7 @@ import os
 # ------------------- Load Environment Variables -------------------
 load_dotenv()
 openai_key = os.getenv("OPENAI_API_KEY")
-BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:5000")  # Fallback to local
+BACKEND_URL = os.getenv("BACKEND_URL", "https://us-financial-assistant-backend.onrender.com")  # Fallback to local
 
 # ------------------- OpenAI Client -------------------
 gpt = OpenAI(api_key=openai_key)
